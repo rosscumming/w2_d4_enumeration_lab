@@ -14,10 +14,13 @@ class StarSystem
 
   def planet_names
     each_planets_name = []
-
     @planets.each { |planet| each_planets_name << planet.name }
-    
     each_planets_name
   end
+
+  def get_planet_by_name(planet_name)
+  found_planet =  @planets.find { | planet | planet.name == planet_name}
+  end
+
 
 end
